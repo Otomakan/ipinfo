@@ -1,0 +1,11 @@
+{
+  "name": "ipinfo",
+  "version": "1.0.0",
+  "description": "get info from one's ip adress\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dddress",
+  "main": "app.js",
+  "scripts": {
+    "test": "start: node.js"
+  },
+  "author": "Otomakan",
+  "license": "ISC"
+}
