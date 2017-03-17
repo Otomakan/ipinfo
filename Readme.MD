@@ -1,0 +1,1 @@
+This is an app which will display basic info extracted from the user IP adress such as language location and operating system.

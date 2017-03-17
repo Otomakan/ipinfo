@@ -4,8 +4,11 @@
   "description": "get info from one's ip adress\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dddress",
   "main": "app.js",
   "scripts": {
-    "test": "start: node.js"
+    "start": "node app.js"
   },
   "author": "Otomakan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
