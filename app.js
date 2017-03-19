@@ -26,20 +26,21 @@ console.log(agent.os.toString());
 	ipAddress ="x-forwarded-for";
 	ipAddress = req.headers[ipAddress];
 	OS = useragent.parse(req.headers['user-agent']).os.toString();
+	console.log(ipAddress)
 
 	var options ={
-		url: 'http://ip-api.com/json/'
+		url: 'http://freegeoip.net/json/'+ ipAddress
 	}
 	request(options, function(err, response, body){
 		if(!err && response.statusCode==200){
 			var body = JSON.parse(body);
-			location = {'region': body.regionName,  'zipcode':body.zip};
+			location = {'region': body.region_name, 'city':body.city_name, 'zipcode':body.zip_code};
 			console.log('Got location')
-			 	result={'language':language, 'IP Address': ipAddress, 'region': location.region, 'zipcode': location.zipcode, 'OS':OS};
-			 	res.json(result);
+			result={'language':language, 'IP Address': ipAddress, 'region': location.region, 'zipcode': location.zipcode, 'OS':OS};
+			res.json(result);
 		}
 		if(err){
-			console.log(err)
+			console.log('erro')
 		}		
 	})
 });
