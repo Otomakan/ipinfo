@@ -34,7 +34,7 @@ console.log(agent.os.toString());
 	request(options, function(err, response, body){
 		if(!err && response.statusCode==200){
 			var body = JSON.parse(body);
-			location = {'region': body.region_name, 'city':body.city_name, 'zipcode':body.zip_code};
+			location = {'region': body.region_name, 'city':body.city, 'zipcode':body.zip_code};
 			console.log('Got location')
 			result={'language':language, 'IP Address': ipAddress, 'region': location.region, 'zipcode': location.zipcode, 'OS':OS};
 			res.json(result);
