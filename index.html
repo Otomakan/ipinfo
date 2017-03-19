@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+	Hello<form method="POST">
+	<input type="Submit" value="Submit">
+	</form>
+<button id="getJSON"> CLICK ME</button>
+
+<script type="text/javascript">
+
+// txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+// txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+// txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+// txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+// txt+= "<p>Platform: " + navigator.platform + "</p>";
+// txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+txt = navigator.platform;
+$(document).ready(function(){
+	$("#getJSON").click(()=>{
+	$.ajax({
+		type:"POST",
+		url: "http://localhost:5000/",
+		data: txt
+		// datatype: 'text'
+	})
+})
+})
+
+
+// document.getElementById("example").innerHTML=txt;
+
+</script>
+</body

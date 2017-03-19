@@ -9,6 +9,9 @@
   "author": "Otomakan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0",
+    "useragent": "^2.1.12"
   }
 }
